@@ -24,8 +24,7 @@ class StringTest {
         final String[] split = input.split(",");
 
         // then
-        assertThat(split).contains("1", "2");
-        assertThat(split).containsExactly("1", "2");
+        assertThat(split).contains("1", "2").containsExactly("1", "2");
     }
 
     @Test
@@ -37,8 +36,7 @@ class StringTest {
         final String[] split = substring.split(",");
 
         // then
-        assertThat(split).contains("1", "2");
-        assertThat(split).containsExactly("1", "2");
+        assertThat(split).contains("1","2").containsExactly("1", "2");
     }
 
     @Test
