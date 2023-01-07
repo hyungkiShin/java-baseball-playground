@@ -35,7 +35,7 @@ public class SetTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"1", "2", "3"})
+    @ValueSource(ints = {1, 2, 3})
     void Set의_contains_메소드를_활용해_1과_2_와_3의_값이_존재하는지를_확인한다(int number) {
         // given & when & then
         assertThat(numbers.contains(number)).isTrue();
