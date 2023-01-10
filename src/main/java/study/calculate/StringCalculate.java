@@ -9,9 +9,9 @@ public class StringCalculate {
         Scanner scanner = new Scanner(System.in);
         final String input = scanner.nextLine();
 
-        final String[] parseString = Formula.split(input);
-        final int result = new Calculator(parseString).calculate();
+        final Calculator calculator = new Calculator(new Formula(input));
+        final int calculate = calculator.calculate();
 
-        System.out.println("result = " + result);
+        System.out.println("result = " + calculate);
     }
 }

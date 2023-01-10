@@ -1,49 +1,14 @@
-package study;
+package study.calculate;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.NullSource;
-import org.junit.jupiter.params.provider.ValueSource;
-import study.calculate.Calculator;
-import study.calculate.Formula;
-import study.calculate.Operator;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-class StringCalculation {
-
-
-    @Test
-    @DisplayName(" \"2 + 3 * 4 / 2\"와 같은 문자열을 입력할 경우 2 + 3 * 4 / 2 실행 결과인 10을 출력해야 한다")
-    void stringCalculate() {
-        // given
-        final String input = "2 + 3 * 4 / 2";
-
-        // when
-        final String[] formulaString = Formula.split(input);
-
-        final int result = new Calculator(formulaString).calculate();
-        // then
-        assertThat(result).isEqualTo(10);
-    }
-
-
-    @ParameterizedTest(name = "#{index} - Run test with args={0}")
-    @NullSource // pass a null value
-    @ValueSource(strings = {"", " "})
-    void null_혹은_빈_값을_보낼때_checked_Exception(String input) {
-        // given & when & then
-        // TODO null 은 ValueSource 로 어떻게 테스트 하는지 확인
-        assertThatThrownBy(() ->
-                Formula.split(input))
-                .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("입력값이 null 이거나 빈 공백 문자입니다.");
-    }
-
+class OperatorTest {
 
     @DisplayName("덧셈 테스트")
     @ParameterizedTest

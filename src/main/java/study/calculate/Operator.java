@@ -24,14 +24,13 @@ public enum Operator {
 
     // 캐싱해서 순회 피하기
     private static final Map<String, Operator> SYMBOL_MAP = new HashMap<>();
-
     static {
         for (Operator oper : values()) {
             SYMBOL_MAP.put(oper.symbol, oper);
         }
     }
 
-    public static Operator of(final String param) {
+    public static Operator getSymbol(final String param) {
         if (SYMBOL_MAP.containsKey(param) == false) {
             throw new IllegalArgumentException("사칙연산 기호가 아닙니다.");
         }
