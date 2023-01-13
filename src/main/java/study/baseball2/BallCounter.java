@@ -10,7 +10,7 @@ public class BallCounter {
     }
 
     public BallStatus play(final BallCounter ball) {
-        if(this.number == ball.number && this.pos == ball.pos) {
+        if(this.equals(ball)) {
             return BallStatus.STRIKE;
         }
 
@@ -19,5 +19,13 @@ public class BallCounter {
         }
 
         return BallStatus.NOTHING;
+    }
+
+    @Override
+    public boolean equals(final Object o) {
+        if (this == o) return true;
+        if (!(o instanceof BallCounter)) return false;
+        final BallCounter that = (BallCounter) o;
+        return pos == that.pos && number == that.number;
     }
 }
