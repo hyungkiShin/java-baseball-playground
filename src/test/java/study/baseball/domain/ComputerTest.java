@@ -16,6 +16,7 @@ class ComputerTest {
         final List<Integer> randomNumber = computer.getRandomNumber();
         assertThat(randomNumber)
                 .hasSize(3)
+                .containsAnyOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
                 .doesNotHaveDuplicates();
     }
 }
