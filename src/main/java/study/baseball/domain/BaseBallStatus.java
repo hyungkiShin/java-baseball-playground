@@ -1,5 +1,9 @@
 package study.baseball.domain;
 
 public enum BaseBallStatus {
-    NOTHING, STRIKE, BALL
+    NOTHING, STRIKE, BALL;
+
+    public boolean isNotNothing() {
+        return this != NOTHING;
+    }
 }
