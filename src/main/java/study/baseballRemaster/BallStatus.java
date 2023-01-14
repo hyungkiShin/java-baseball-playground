@@ -1,5 +1,9 @@
 package study.baseballRemaster;
 
 public enum BallStatus {
-    BALL, STRIKE, NOTHING
+    BALL, STRIKE, NOTHING;
+
+    public boolean isNothing() {
+        return this != NOTHING;
+    }
 }
