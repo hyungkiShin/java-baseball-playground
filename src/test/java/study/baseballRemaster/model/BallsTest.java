@@ -1,9 +1,13 @@
-package study.baseballRemaster;
+package study.baseballRemaster.model;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import study.baseballRemaster.model.Ball;
+import study.baseballRemaster.model.BallStatus;
+import study.baseballRemaster.model.Balls;
+import study.baseballRemaster.model.Judge;
+import study.baseballRemaster.model.Player;
 
 import java.util.Arrays;
 

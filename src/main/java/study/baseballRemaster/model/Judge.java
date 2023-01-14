@@ -1,4 +1,4 @@
-package study.baseballRemaster;
+package study.baseballRemaster.model;
 
 public class Judge {
 

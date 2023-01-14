@@ -1,7 +1,8 @@
-package study.baseballRemaster;
+package study.baseballRemaster.model;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import study.baseballRemaster.model.NumberGenerator;
 
 import java.util.List;
 

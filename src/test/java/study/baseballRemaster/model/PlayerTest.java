@@ -1,8 +1,8 @@
-package study.baseballRemaster;
+package study.baseballRemaster.model;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import study.baseballRemaster.model.Player;
 
 import java.util.List;
 
