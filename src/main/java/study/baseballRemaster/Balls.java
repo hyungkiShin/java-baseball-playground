@@ -23,6 +23,18 @@ public class Balls {
         return result;
     }
 
+    public Judge play(Player player) {
+        Balls balls = new Balls(player.getUserNumbers());
+        Judge judge = new Judge();
+
+        for (Ball ball: randomNumber) {
+            BallStatus play = balls.play(ball);
+            judge.report(play);
+        }
+
+        return judge;
+    }
+
     public BallStatus play(final Ball ball) {
         return getBallStatus(ball);
     }
@@ -30,7 +42,7 @@ public class Balls {
     private BallStatus getBallStatus(final Ball ball) {
         for (Ball item : randomNumber) {
             BallStatus play = item.play(ball);
-            if (play.isNothing()) {
+            if (play.isNotNothing()) {
                 return play;
             }
         }
