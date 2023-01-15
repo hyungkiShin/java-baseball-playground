@@ -6,6 +6,7 @@ import java.util.List;
 public class Player {
 
     private final List<Integer> userNumbers;
+    private static final String DELIMITER = "";
 
     public Player(String userInput) {
         this.userNumbers = convertUserNumber(userInput);
@@ -13,7 +14,7 @@ public class Player {
 
     private List<Integer> convertUserNumber(final String userNumbers) {
         validate(userNumbers);
-        final String[] numberArrays = userNumbers.split("");
+        final String[] numberArrays = userNumbers.split(DELIMITER);
         return getNumberLists(numberArrays);
     }
 

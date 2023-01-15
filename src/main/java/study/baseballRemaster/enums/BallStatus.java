@@ -1,4 +1,4 @@
-package study.baseballRemaster.model;
+package study.baseballRemaster.enums;
 
 public enum BallStatus {
     BALL, STRIKE, NOTHING;

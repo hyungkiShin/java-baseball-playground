@@ -1,5 +1,7 @@
 package study.baseballRemaster.model;
 
+import study.baseballRemaster.enums.BallStatus;
+
 import java.util.Objects;
 
 public class Ball {
