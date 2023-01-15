@@ -1,5 +1,7 @@
 package study.baseballRemaster.model;
 
+import study.baseballRemaster.enums.BallStatus;
+
 public class Judge {
 
     private int strike = 0;
@@ -11,6 +13,18 @@ public class Judge {
 
     public int getBall() {
         return ball;
+    }
+
+    public boolean hasBall(){
+        return ball > 0;
+    }
+
+    public boolean hasStrike(){
+        return strike > 0;
+    }
+
+    public boolean isNothing(){
+        return strike == 0 && ball == 0;
     }
 
     public void report(final BallStatus play) {
